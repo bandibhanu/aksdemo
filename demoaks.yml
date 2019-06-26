@@ -13,8 +13,8 @@ spec:
         app: demoaks
     spec:
       containers:
-      - name: demoaks
-        image: acrsample1.azurecr.io/bhanu9505508737/demoaks:#{Build.BuildId}#
+      - name: ACRsample1
+        image: acrsample1.azurecr.io/bhanu9505508737/aksdemo:#{Build.BuildId}#
         ports:
         - containerPort: 80
         env:
@@ -34,4 +34,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: myapp
+    app: demoaks
