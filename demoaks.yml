@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demoaks-deployment
+  name: aksdemo-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demoaks
+      app: aksdemo
   template:
     metadata:
       labels:
-        app: demoaks
+        app: aksdemo
     spec:
       containers:
       - name: ACRsample1
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demoaks
+  name: aksdemo
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: demoaks
+    app: aksdemo
